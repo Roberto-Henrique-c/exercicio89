@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url('../img/15942307-arte-do-jogo-2d-paisagem-natural-para-jogos-aplicativos-moveis-e-computadores-ilustracaoial-de-plano-de-fundo-do-jogo-gratis-vetor.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+
+}
+
+.bird {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 40vh;
+  left: 30vw;
+  z-index: 2;
+}
+
+.pipe_sprite {
+  position: fixed;
+  width: 100px;
+  height: 400px;
+  z-index: 1; 
+  object-fit: contain;
+
+
+}
+
+.message {
+  position: fixed;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #c91a1a;
+  z-index: 3;
+}
+
+.score {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  color: goldenrod;
+  z-index: 3;
+}
+
+.high_scores {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.difficulty-select {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
