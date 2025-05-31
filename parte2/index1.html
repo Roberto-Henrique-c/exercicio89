@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+  <main>
+    <section id="playerNameScreen" class="screen active">
+      <h1>Bem-vindo ao Jogo da Memória</h1>
+      <form id="playerNameForm">
+        <label for="playerNameInput">Digite seu nome:</label>
+        <input
+          type="text"
+          id="playerNameInput"
+          name="playerName"
+          maxlength="30"
+          required
+          autocomplete="off"
+          placeholder="Seu nome aqui"
+        />
+        <button type="submit">Confirmar</button>
+      </form>
+    </section>
+
+    <section id="difficultyScreen" class="screen" aria-hidden="true">
+      <h2>Escolha o nível de dificuldade</h2>
+      <div id="difficultyButtons">
+        <button type="button" data-difficulty="easy" aria-label="Fácil 4 por 4">Fácil (4x4)</button>
+        <button type="button" data-difficulty="medium" aria-label="Médio 6 por 6">Médio (6x6)</button>
+        <button type="button" data-difficulty="hard" aria-label="Difícil 8 por 8">Difícil (8x8)</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen" aria-hidden="true">
+      <header>
+        <h2>Jogando: <span id="displayPlayerName"></span></h2>
+        <p id="scoreDisplay">Pontuação: 0</p>
+      </header>
+      <div id="gameBoard" role="grid" aria-live="polite" aria-label="Tabuleiro do jogo da memória">
+      </div>
+      <p id="message" aria-live="assertive" role="alert"></p>
+    </section>
+
+    <section id="victoryScreen" class="screen" aria-hidden="true">
+      <h2>Parabéns, <span id="winnerName"></span>!</h2>
+      <p>Sua pontuação final foi: <span id="finalScore"></span></p>
+
+      <h3>Top 5 pontuações</h3>
+      <ol id="highScoresList" aria-label="Lista das cinco maiores pontuações">
+      </ol>
+
+      <button id="playAgainBtn" type="button">Jogar Novamente</button>
+    </section>
+  </main>
+<script src="js/script.js"></script>
+</body>
+</html>
