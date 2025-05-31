@@ -26,19 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let lockBoard = false;
   let matchedPairs = 0;
 
-  // --- Imagens únicas (URL de exemplo de placeholder, substitua pela API ou local)
   const generateImageURLs = (count) => {
     return Array.from({ length: count }, (_, i) => `https://picsum.photos/seed/${Math.random()}/100`);
   };
 
-  // --- Criação das cartas
   function createCards() {
     gameBoard.innerHTML = "";
-    gameBoard.className = ""; // Resetar classes anteriores
+    gameBoard.className = ""; 
     const imageCount = (gridSize * gridSize) / 2;
     const images = generateImageURLs(imageCount);
-    const cardsData = [...images, ...images] // Criar pares
-      .sort(() => 0.5 - Math.random()) // Embaralhar
+    const cardsData = [...images, ...images] 
+      .sort(() => 0.5 - Math.random()) 
 
     cardsData.forEach((imgSrc, index) => {
       const card = document.createElement("div");
